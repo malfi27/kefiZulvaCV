@@ -1,0 +1,368 @@
+/*------------
+Font
+------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*------------
+Resset Css
+------------*/
+*,::after,::before,h1,h2,p {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+    outline: none;
+    transition: 1s;
+}
+
+$primary-color :#435ebe;
+
+body {
+    background-color: #f2f7ff;
+}
+
+.cardContent {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 16px;
+    
+    .list {
+        position: relative;
+        ul {
+            list-style: none;
+            padding: 0;
+            padding-left: 1.5rem;
+            li {
+                margin: .5rem 0;
+                transition: .5s;
+                cursor: pointer;
+                &:hover {
+                    transform: translateX(10px);
+                    transition: .5s;
+                }
+            }
+            .present {
+                font-weight: 600;
+            }
+            &::before {
+                content: '';
+                background: $primary-color;
+                display: block;
+                height: 100%;
+                width: 8px;
+                position: absolute;
+                left: 0px;
+                border-radius: 20px;
+            }
+        }
+    }
+    .skill {
+        ul {
+            list-style: none;
+            padding: 0;
+            padding-left: 1.5rem;
+            li {
+                position: relative;
+                margin: .5rem 0;
+                transition: .5s;
+                padding-left: .5rem;
+                &::before {
+                    content: '';
+                    height: 16px;
+                    width: 16px;
+                    background: $primary-color;
+                    position: absolute;
+                    left: -22px;
+                    top: 2px;
+                    border-radius: 3px;
+                }
+            }
+            li:nth-child(even) {
+                &::before {
+                    background: #a4bdf5;
+                }
+            }
+        }
+    }
+    .bodyHoby {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .hoby {
+            width: 100%;
+            max-width: 149px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: .5rem;
+            margin: .5rem;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            background: #fff;
+            border-radius: 6px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            img {
+                width: 100%;
+                max-width: 50px;
+            }
+            .nameHoby {
+                margin-top: .5rem;
+                font-size: 14px;
+            }
+        }
+    }
+}
+.margin {
+    margin-bottom: 3rem;
+}
+.titleContent {
+    color: $primary-color;
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 2rem;
+}
+
+.wrapperClipTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    .clip {
+        clip-path: circle(28% at 0 0);
+        transition: none;
+        img {
+            width: 100%;
+        }
+    }
+}
+.wrapperClipBottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    .clipBottom {
+        clip-path: circle(28% at 100% 100%);
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#wrapperMainContent{
+    
+    .container {
+        .mainContent {
+            position: relative;
+            z-index: 2;
+            .headOfContent {
+                display: flex;
+                .userImages {
+                    img {
+                        width: 100%;
+                        border-radius: 16px;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    }
+                }
+                .informationUser {
+                    .detaiUser {
+                        .name {
+                            font-weight: 900;
+                        }
+                        .jobs {
+                            color: $primary-color;
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+            .bodyOfContent {
+                display: flex;
+            }
+            .contacts {
+                padding: 1rem 1.5rem;
+                display: flex;
+                justify-content: center;
+                background: rgba(255, 255, 255, 1);
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                border-radius: 16px;
+                .socialMedia {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    .icon {
+                        img {
+                            width: 100%;
+                            max-width: 36px;
+                        }
+                    }
+                    p {
+                        margin-left: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width : 0px) {
+    #wrapperMainContent{
+        padding: 5rem 0;
+        .container {
+            .mainContent {
+                .headOfContent {
+                    flex-direction: column;
+                    align-items: center;
+                    .userImages {
+                        img {
+                            max-width: 160px;
+                        }
+                    }
+                    .informationUser {
+                        margin-top: 1.5rem;
+                        padding: 2rem 1.5rem;
+                        .detaiUser {
+                            margin-bottom: 2rem;
+                            .name {
+                                font-size: 24px;
+                            }
+                            .jobs {
+                                font-size: 20px;
+                            }
+                        }
+                        .about {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+                .bodyOfContent {
+                    flex-direction: column;
+                    .left {
+                        .cardContent {
+                            padding: 2rem 1.5rem;
+                        }
+                    }
+                    .right {
+                        .cardContent {
+                            padding: 2rem 1.5rem;
+                        }
+                    }
+                }
+                .contacts {
+                    flex-direction: column;
+                    .socialMedia {
+                        margin: .5rem 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 992px) {
+    #wrapperMainContent{
+        .container {
+            .mainContent {
+                .headOfContent {
+                    flex-direction: row;
+                    align-items: flex-start;
+                    .userImages {
+                        width: 25%;
+                        img {
+                            max-width: 220px;
+                        }
+                    }
+                    .informationUser {
+                        margin-top: 0;
+                        margin-left: 3rem;
+                        padding: 3rem 4rem;
+                        width: 75%;
+                        min-height: 293px;
+                        .detaiUser {
+                            .name {
+                                font-size: 32px;
+                            }
+                            .jobs {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+                .bodyOfContent {
+                    flex-direction: row;
+                    .left {
+                        width: 60%;
+                        margin-right: 3rem;
+                        .cardContent {
+                            min-height: 290px;
+                            padding: 2rem 3rem;
+                        }
+                        .programingSkill {
+                            min-height: 344px;
+                        }
+                    }
+                    .right {
+                        width: 40%;
+                        .cardContent {
+                            min-height: 290px;
+                            padding: 2rem 3rem;
+                        }
+                    }
+                }
+                .contacts {
+                    flex-direction: row;
+                    .socialMedia {
+                        margin: 0 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 1200px) {
+    #wrapperMainContent{
+        .container {
+            .mainContent {
+                .headOfContent {
+                    .userImages {
+                        img {
+                            max-width: 270px;
+                        }
+                    }
+                    .informationUser {
+                        min-height: 354px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 1400px) {
+    #wrapperMainContent{
+        .container {
+            .mainContent {
+                .headOfContent {
+                    .userImages {
+                        img {
+                            max-width: 310px;
+                        }
+                    }
+                    .informationUser {
+                        margin-left: 4rem;
+                        min-height: 408px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,338 @@
+/*------------
+Font
+------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: 'Overpass', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*------------
+Resset Css
+------------*/
+*, ::after, ::before, h1, h2, p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Overpass', sans-serif;
+  outline: none;
+  transition: 1s;
+}
+
+body {
+  background-color: #f2f7ff;
+}
+
+.cardContent {
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 16px;
+}
+
+.cardContent .list {
+  position: relative;
+}
+
+.cardContent .list ul {
+  list-style: none;
+  padding: 0;
+  padding-left: 1.5rem;
+}
+
+.cardContent .list ul li {
+  margin: .5rem 0;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.cardContent .list ul li:hover {
+  transform: translateX(10px);
+  transition: .5s;
+}
+
+.cardContent .list ul .present {
+  font-weight: 600;
+}
+
+.cardContent .list ul::before {
+  content: '';
+  background: #435ebe;
+  display: block;
+  height: 100%;
+  width: 8px;
+  position: absolute;
+  left: 0px;
+  border-radius: 20px;
+}
+
+.cardContent .skill ul {
+  list-style: none;
+  padding: 0;
+  padding-left: 1.5rem;
+}
+
+.cardContent .skill ul li {
+  position: relative;
+  margin: .5rem 0;
+  transition: .5s;
+  padding-left: .5rem;
+}
+
+.cardContent .skill ul li::before {
+  content: '';
+  height: 16px;
+  width: 16px;
+  background: #435ebe;
+  position: absolute;
+  left: -22px;
+  top: 2px;
+  border-radius: 3px;
+}
+
+.cardContent .skill ul li:nth-child(even)::before {
+  background: #a4bdf5;
+}
+
+.cardContent .bodyHoby {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardContent .bodyHoby .hoby {
+  width: 100%;
+  max-width: 149px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .5rem;
+  margin: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.cardContent .bodyHoby .hoby:hover {
+  transform: scale(1.1);
+}
+
+.cardContent .bodyHoby .hoby img {
+  width: 100%;
+  max-width: 50px;
+}
+
+.cardContent .bodyHoby .hoby .nameHoby {
+  margin-top: .5rem;
+  font-size: 14px;
+}
+
+.margin {
+  margin-bottom: 3rem;
+}
+
+.titleContent {
+  color: #435ebe;
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+
+.wrapperClipTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.wrapperClipTop .clip {
+  clip-path: circle(28% at 0 0);
+  transition: none;
+}
+
+.wrapperClipTop .clip img {
+  width: 100%;
+}
+
+.wrapperClipBottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.wrapperClipBottom .clipBottom {
+  clip-path: circle(28% at 100% 100%);
+}
+
+.wrapperClipBottom .clipBottom img {
+  width: 100%;
+}
+
+#wrapperMainContent .container .mainContent {
+  position: relative;
+  z-index: 2;
+}
+
+#wrapperMainContent .container .mainContent .headOfContent {
+  display: flex;
+}
+
+#wrapperMainContent .container .mainContent .headOfContent .userImages img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#wrapperMainContent .container .mainContent .headOfContent .informationUser .detaiUser .name {
+  font-weight: 900;
+}
+
+#wrapperMainContent .container .mainContent .headOfContent .informationUser .detaiUser .jobs {
+  color: #435ebe;
+  font-weight: 800;
+}
+
+#wrapperMainContent .container .mainContent .bodyOfContent {
+  display: flex;
+}
+
+#wrapperMainContent .container .mainContent .contacts {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 16px;
+}
+
+#wrapperMainContent .container .mainContent .contacts .socialMedia {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#wrapperMainContent .container .mainContent .contacts .socialMedia .icon img {
+  width: 100%;
+  max-width: 36px;
+}
+
+#wrapperMainContent .container .mainContent .contacts .socialMedia p {
+  margin-left: .5rem;
+}
+
+@media screen and (min-width: 0px) {
+  #wrapperMainContent {
+    padding: 5rem 0;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .userImages img {
+    max-width: 160px;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser {
+    margin-top: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser .detaiUser {
+    margin-bottom: 2rem;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser .detaiUser .name {
+    font-size: 24px;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser .detaiUser .jobs {
+    font-size: 20px;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser .about {
+    margin-bottom: 2rem;
+  }
+  #wrapperMainContent .container .mainContent .bodyOfContent {
+    flex-direction: column;
+  }
+  #wrapperMainContent .container .mainContent .bodyOfContent .left .cardContent {
+    padding: 2rem 1.5rem;
+  }
+  #wrapperMainContent .container .mainContent .bodyOfContent .right .cardContent {
+    padding: 2rem 1.5rem;
+  }
+  #wrapperMainContent .container .mainContent .contacts {
+    flex-direction: column;
+  }
+  #wrapperMainContent .container .mainContent .contacts .socialMedia {
+    margin: .5rem 0;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #wrapperMainContent .container .mainContent .headOfContent {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .userImages {
+    width: 25%;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .userImages img {
+    max-width: 220px;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser {
+    margin-top: 0;
+    margin-left: 3rem;
+    padding: 3rem 4rem;
+    width: 75%;
+    min-height: 293px;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser .detaiUser .name {
+    font-size: 32px;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser .detaiUser .jobs {
+    font-size: 24px;
+  }
+  #wrapperMainContent .container .mainContent .bodyOfContent {
+    flex-direction: row;
+  }
+  #wrapperMainContent .container .mainContent .bodyOfContent .left {
+    width: 60%;
+    margin-right: 3rem;
+  }
+  #wrapperMainContent .container .mainContent .bodyOfContent .left .cardContent {
+    min-height: 290px;
+    padding: 2rem 3rem;
+  }
+  #wrapperMainContent .container .mainContent .bodyOfContent .left .programingSkill {
+    min-height: 344px;
+  }
+  #wrapperMainContent .container .mainContent .bodyOfContent .right {
+    width: 40%;
+  }
+  #wrapperMainContent .container .mainContent .bodyOfContent .right .cardContent {
+    min-height: 290px;
+    padding: 2rem 3rem;
+  }
+  #wrapperMainContent .container .mainContent .contacts {
+    flex-direction: row;
+  }
+  #wrapperMainContent .container .mainContent .contacts .socialMedia {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #wrapperMainContent .container .mainContent .headOfContent .userImages img {
+    max-width: 270px;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser {
+    min-height: 354px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #wrapperMainContent .container .mainContent .headOfContent .userImages img {
+    max-width: 310px;
+  }
+  #wrapperMainContent .container .mainContent .headOfContent .informationUser {
+    margin-left: 4rem;
+    min-height: 408px;
+  }
+}
